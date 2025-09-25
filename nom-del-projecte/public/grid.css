@@ -1,0 +1,87 @@
+main {
+    width: 300px;
+    margin: auto;
+}
+
+.A {
+    grid-area: A;
+}
+
+.B {
+    grid-area: B;
+}
+
+.C {
+    grid-area: C;
+}
+
+.D {
+    grid-area: D;
+}
+
+.E {
+    grid-area: E;
+}
+
+.F {
+    grid-area: F;
+}
+
+.container {
+    border: 2px grey solid;
+    margin-bottom: 30px;
+}
+
+#c1 {
+    padding: 10px;
+    display: grid;
+    grid-template-areas:
+        "A B C"
+        "D E F";
+    gap: 12px;
+}
+
+
+#c2 {
+    /*No funciona, motivo desconocido*/
+    padding: 10px;
+    gap: 12px;
+    display: grid;
+    grid-template-columns: 1fr 1fr 1fr;
+    grid-template-areas:
+        "A A B"
+        "C D B"
+    ;
+}
+
+#c3 {
+    padding: 10px;
+    gap: 12px;
+    display: grid;
+    grid-template-columns: 1fr 1fr 1fr 1fr;
+    grid-template-areas:
+        "A A B B"
+        "C D D D"
+        "E E E E"
+    ;
+}
+
+#c7 {
+    /*No funciona, motivo desconocido*/
+    padding: 10px;
+    gap: 12px;
+    display: grid;
+    grid-template-columns: 1fr 1fr 1fr 1fr;
+    grid-template-rows: auto;
+    grid-template-areas:
+        "A A B E"
+        "C D B E"
+    ;
+}
+
+.container div {
+    background-color: grey;
+    color: white;
+    font-weight: bold;
+    padding: 20px 20px;
+}
