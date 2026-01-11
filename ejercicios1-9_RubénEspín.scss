@@ -1,0 +1,178 @@
+@use "sass:color";
+@use "sass:list";
+@use "sass:map";
+@use "sass:math";
+
+// 1. Donada una llista de colors recorre-la per:
+// Crea una nova llista amb els seus complementaris
+// Aplica el segon color de la llista a una classe
+
+$colores: #ff5733, #33ff57, #3357ff, #f333ff;
+
+$colores-complementarios: ();
+@each $c in $colores {
+  $colores-complementarios: append($colores-complementarios, color.complement($c));
+}
+
+.segundo-color {
+  color: list.nth($colores, 2);
+}
+
+// 2. Crea un mixin amb tots els paràmetres per a crear ombres box-shadow i aplica'l a una classe.
+
+@mixin sombra($x, $y, $desenfoque, $ext, $color) {
+  box-shadow: $x $y $desenfoque $ext $color;
+}
+
+.sombra-basica {
+  @include sombra(2px, 4px, 6px, 0px, rgba(0,0,0,0.3));
+}
+
+// 3. Modifica el mixin del punt anterior perquè:
+// El color de shadow sigui per defecte gris en format RGB
+// El valor d'opacity sigui per defecte 0.5
+
+@mixin sombra-default($x, $y, $desenfoque, $ext, $color: rgb(128,128,128), $opacidad: 0.5) {
+  box-shadow: $x $y $desenfoque $ext rgba($color, $opacidad);
+}
+
+.sombra-default {
+  @include sombra-default(2px, 4px, 6px, 0px);
+}
+
+// 4. Crea un mixin que generi un gradient lineal entre dos colors i un angle donat
+// Utilitza una llista de colors com a color inicial
+// Per a color final utilitza el primer color amb la lluminositat ajustada al 20% mitjançant la funció color.adjust()
+// L'angle que s'aplica al gradient per a cada classe és l'índex de la llista de colors multiplicat pel angle passat com a paràmetre
+// Com a sufix de la classe generada per a cada color, utilitza l'índex de la llista de colors
+
+@mixin gradiente-lineal($colores, $angulo) {
+  @each $c in $colores {
+    $i: list.index($colores, $c);
+    $c-final: color.adjust($c, $lightness: -20%);
+    $angulo-final: $angulo * $i;
+
+    &-#{$i} {
+      background: linear-gradient(#{$angulo-final}deg, $c, $c-final);
+    }
+  }
+}
+
+.gradiente {
+  @include gradiente-lineal($colores, 100deg);
+}
+
+// 5. A partir d'aquest map crea'n un altre amb els valors incrementats amb 0.4rem i fusiona'ls
+
+$tamaños: ("regular": 1rem, "medio": 1.5rem, "grande": 2rem);
+
+$tamaños-aumentados: ();
+@each $clave, $valor in $tamaños {
+  $tamaños-aumentados: map.merge($tamaños-aumentados, ($clave: $valor + 0.4rem));
+}
+
+$tamaños-todos: map.merge($tamaños, $tamaños-aumentados);
+
+// 6. Crea un mixin que a partir d'un map generi classes css per aplicar directament a l'HTML
+// Modifica el mixin anterior perquè es pugui indicar la unitat de la propietat.
+
+@mixin clases($mapa) {
+  $prop: map.get($mapa, "propiedad");
+  $clase: map.get($mapa, "clase");
+  $valores: map.get($mapa, "valores");
+  $unidad: map.get($mapa, "unidad");
+
+  @each $k, $v in $valores {
+    .#{$clase}-#{$k} {
+      @if $unidad {
+        #{$prop}: #{$v}#{$unidad};
+      } @else {
+        #{$prop}: $v;
+      }
+    }
+  }
+}
+
+$opacidad: (
+  propiedad: opacity,
+  clase: op,
+  valores: (
+    0: 0,
+    25: 0.25,
+    50: 0.5,
+    75: 0.75,
+    100: 1,
+  )
+);
+
+@include clases($opacidad);
+
+$tamaño-fuente: (
+  propiedad: font-size,
+  clase: fs,
+  unidad: rem,
+  valores: (
+    xs: 0.4,
+    md: 0.625,
+    lg: 1.2,
+    xl: 1.8,
+    xxl: 2.5
+  )
+);
+
+@include clases($tamaño-fuente);
+
+// 7. Crea una funció que se li passi com a paràmetres un color, el percentatge (per aclarir un número negatiu, per enfosquir positiu)
+// i el límit de percentatge a aplicar, per defecte 90 que és el valor màxim.
+// El percentatge va des de -limit a +limit
+// Si es passa un percentatge fora del rang anterior s'agafa el límit
+// La funció retorna un color que es pot aplicar a propietats css
+
+@function ajustar-color($color, $porcentaje, $limite: 90) {
+  $p: $porcentaje;
+  @if $porcentaje < -$limite {
+    $p: -$limite;
+  } @else if $porcentaje > $limite {
+    $p: $limite;
+  }
+
+  @return color.adjust($color, $lightness: $p*1%);
+}
+
+// 8. Crea una funcio que retorni un map que contingui una escala de colors.
+// Paràmetres: color, interval i límit de percentatge. Utilitza la funció del punt anterior.
+
+@function escala-colores($color, $paso, $limite: 90) {
+  $escala: ();
+  @for $i from -$limite through $limite {
+    @if $i % $paso == 0 {
+      $escala: map.merge($escala, ($i: ajustar-color($color, $i, $limite)));
+    }
+  }
+  @return $escala;
+}
+
+// 9. Crea un mixin per generar classes a partir del map generat en el punt anterior, i la propietat passada com a paràmetre.
+
+@mixin clases-color($color, $prop, $paso, $limite: 90) {
+  $escala: escala-colores($color, $paso, $limite);
+  $nombre: inspect($color);
+
+  @each $p, $c-ajustada in $escala {
+    @if $p < 0 {
+      .#{$nombre}-#{math.abs($p)} {
+        #{$prop}: $c-ajustada;
+      }
+    } @else if $p == 0 {
+      .#{$nombre} {
+        #{$prop}: $c-ajustada;
+      }
+    } @else {
+      .#{$nombre}#{$p} {
+        #{$prop}: $c-ajustada;
+      }
+    }
+  }
+}
+
+@include clases-color(orange, background-color, 15, 60);
