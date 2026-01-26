@@ -1,0 +1,173 @@
+<!doctype html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Document</title>
+    <link
+      rel="stylesheet"
+      href="node_modules/bootstrap/dist/css/bootstrap.min.css"
+    />
+  </head>
+
+  <body>
+    <header
+      class="bg-dark text-white p-3 d-flex justify-content-between align-items-center"
+    >
+      <a class="logo"><img src="" alt="Logo" /></a>
+      <nav>
+        <ul>
+          <li>Home</li>
+          <li>Contact</li>
+          <li>Dropdown</li>
+          <li>Disabled</li>
+        </ul>
+      </nav>
+      <div class="modal">
+        <ul>
+          <li>Log In</li>
+          <li>Sign In</li>
+        </ul>
+      </div>
+      <div id="header-right">
+        <button
+          class="btn btn-primary"
+          type="button"
+          data-bs-toggle="offcanvas"
+          data-bs-target="#offcanvas"
+        >
+          Notifications
+        </button>
+        <input type="text" placeholder="Search" />
+        <button>Search</button>
+        <div id="offcanvas" class="offcanvas offcanvas-end">
+          <div class="offcanvas-header">
+            <h5 class="offcanvas-title">Notifications</h5>
+            <button
+              type="button"
+              class="btn-close"
+              data-bs-dismiss="offcanvas"
+            ></button>
+          </div>
+          <div class="offcanvas-body">
+            <p>
+              Some text as placeholder.In real life you can have the elements
+              you have chosen. Like, text, images, lists, etc.
+            </p>
+            <div class="list-group">
+              <a
+                href="#"
+                class="list-group-item list-group-item-action"
+                aria-current="true"
+              >
+                <div class="d-flex w-100 justify-content-between">
+                  <h5 class="mb-1">List group item heading</h5>
+                  <small>3 days ago</small>
+                </div>
+                <p class="mb-1">Some placeholder content in a paragraph.</p>
+                <small class="text-muted">And some small print.</small>
+              </a>
+              <a href="#" class="list-group-item list-group-item-action">
+                <div class="d-flex w-100 justify-content-between">
+                  <h5 class="mb-1">List group item heading</h5>
+                  <small>3 days ago</small>
+                </div>
+                <p class="mb-1">Some placeholder content in a paragraph.</p>
+                <small class="text-muted">And some muted small print.</small>
+              </a>
+              <a href="#" class="list-group-item list-group-item-action">
+                <div class="d-flex w-100 justify-content-between">
+                  <h5 class="mb-1">List group item heading</h5>
+                  <small>3 days ago</small>
+                </div>
+                <p class="mb-1">Some placeholder content in a paragraph.</p>
+                <small class="text-muted">And some muted small print.</small>
+              </a>
+            </div>
+            <button
+              class="btn btn-primary mt-3"
+              type="button"
+              data-bs-toggle="offcanvas"
+              data-bs-target="#offcanvas"
+            >
+              Clear
+            </button>
+          </div>
+        </div>
+      </div>
+    </header>
+    <main>
+      <nav aria-label="breadcrumb">
+        <ol class="breadcrumb">
+          <li class="breadcrumb-item"><a href="index.html">Home</a></li>
+          <li class="breadcrumb-item"><a href="library.html">Library</a></li>
+          <li class="breadcrumb-item active" aria-current="page">Data</li>
+        </ol>
+      </nav>
+      <section id="carousel" class="carousel slide mb-2">
+        <div class="carousel-indicators">
+          <button
+            type="button"
+            data-bs-target="#carousel"
+            data-bs-slide-to="0"
+            class="active"
+            aria-current="true"
+            aria-label="Slide 1"
+          ></button>
+
+          <button
+            type="button"
+            data-bs-target="#carousel"
+            data-bs-slide-to="1"
+            aria-label="Slide 2"
+          ></button>
+
+          <button
+            type="button"
+            data-bs-target="#carousel"
+            data-bs-slide-to="2"
+            aria-label="Slide 3"
+          ></button>
+        </div>
+        <div class="carousel-inner">
+          <div class="carousel-item active">
+            <img src="media/pexels-flickr-157040.jpg" class="d-block w-100" />
+          </div>
+          <div class="carousel-item">
+            <img
+              src="media/pexels-rodolfo-quirós-2330137.jpg"
+              class="d-block w-100"
+            />
+          </div>
+          <div class="carousel-item">
+            <img
+              src="media/pexels-soumil-kumar-735911.jpg"
+              class="d-block w-100"
+            />
+          </div>
+        </div>
+        <button
+          class="carousel-control-prev"
+          data-bs-target="#carousel"
+          data-bs-slide="prev"
+        >
+          <span class="carousel-control-prev-icon"></span>
+        </button>
+        <button
+          class="carousel-control-next"
+          data-bs-target="#carousel"
+          data-bs-slide="next"
+        >
+          <span class="carousel-control-next-icon"></span>
+        </button>
+      </section>
+      <section class="cards">
+        <div class="card">
+          <img src="media/pexels-format-1.jpg" alt="" />
+        </div>
+      </section>
+    </main>
+    <footer></footer>
+    <script src="node_modules/bootstrap/dist/js/bootstrap.bundle.min.js"></script>
+  </body>
+</html>
