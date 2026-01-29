@@ -1,7 +1,12 @@
+// 1. Primero cargar variables personalizadas
 @use 'abstracts' as *;
+
+// 2. Importar Bootstrap (usará tus variables)
+@use 'vendors' as *;
+
+// 3. Luego el resto de estilos
 @use 'base' as *;
 @use 'components' as *;
 @use 'layout' as *;
 @use 'pages' as *;
 @use 'themes' as *;
-@use 'vendors' as *;

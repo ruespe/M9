@@ -3,98 +3,233 @@
   <head>
     <meta charset="UTF-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-    <title>Document</title>
-    <link
-      rel="stylesheet"
-      href="node_modules/bootstrap/dist/css/bootstrap.min.css"
-    />
+    <title>aaaaaaaaaaa</title>
+    <link rel="stylesheet" href="public/css/style.css" />
   </head>
 
   <body>
     <header
-      class="bg-dark text-white p-3 d-flex justify-content-between align-items-center"
+      class="bg-white text-white p-3 d-flex justify-content-between align-items-center"
     >
-      <a class="logo"><img src="" alt="Logo" /></a>
-      <nav>
-        <ul>
+      <nav class="navbar ">
+        <a class="navbar-brand" href="#">SoftGPL</a>
+        <ul class="d-flex list-unstyled mb-0 text-black gap-3">
           <li>Home</li>
           <li>Contact</li>
-          <li>Dropdown</li>
+          <li
+            class="nav-link dropdown-toggle"
+            data-bs-toggle="dropdown"
+            aria-expanded="false"
+          >
+            Dropdown
+          </li>
+          <ul class="dropdown-menu">
+            <li><a href=""></a></li>
+            <li><a href=""></a></li>
+            <li><a href=""></a></li>
+          </ul>
           <li>Disabled</li>
         </ul>
-      </nav>
-      <div class="modal">
-        <ul>
-          <li>Log In</li>
-          <li>Sign In</li>
-        </ul>
-      </div>
-      <div id="header-right">
-        <button
-          class="btn btn-primary"
-          type="button"
-          data-bs-toggle="offcanvas"
-          data-bs-target="#offcanvas"
-        >
-          Notifications
-        </button>
-        <input type="text" placeholder="Search" />
-        <button>Search</button>
-        <div id="offcanvas" class="offcanvas offcanvas-end">
-          <div class="offcanvas-header">
-            <h5 class="offcanvas-title">Notifications</h5>
-            <button
-              type="button"
-              class="btn-close"
-              data-bs-dismiss="offcanvas"
-            ></button>
-          </div>
-          <div class="offcanvas-body">
-            <p>
-              Some text as placeholder.In real life you can have the elements
-              you have chosen. Like, text, images, lists, etc.
-            </p>
-            <div class="list-group">
-              <a
-                href="#"
-                class="list-group-item list-group-item-action"
-                aria-current="true"
-              >
-                <div class="d-flex w-100 justify-content-between">
-                  <h5 class="mb-1">List group item heading</h5>
-                  <small>3 days ago</small>
-                </div>
-                <p class="mb-1">Some placeholder content in a paragraph.</p>
-                <small class="text-muted">And some small print.</small>
-              </a>
-              <a href="#" class="list-group-item list-group-item-action">
-                <div class="d-flex w-100 justify-content-between">
-                  <h5 class="mb-1">List group item heading</h5>
-                  <small>3 days ago</small>
-                </div>
-                <p class="mb-1">Some placeholder content in a paragraph.</p>
-                <small class="text-muted">And some muted small print.</small>
-              </a>
-              <a href="#" class="list-group-item list-group-item-action">
-                <div class="d-flex w-100 justify-content-between">
-                  <h5 class="mb-1">List group item heading</h5>
-                  <small>3 days ago</small>
-                </div>
-                <p class="mb-1">Some placeholder content in a paragraph.</p>
-                <small class="text-muted">And some muted small print.</small>
-              </a>
+        <div id="container-login" class="d-flex gap-2 ms-3 text-black">
+          <a
+            href="#"
+            class="nav-link"
+            data-bs-toggle="modal"
+            data-bs-target="#loginModal"
+            >Log In</a
+          >
+          <a
+            href="#"
+            class="nav-link"
+            data-bs-toggle="modal"
+            data-bs-target="#signinModal"
+            >Sign In</a
+          >
+        </div>
+        <div id="loginModal" class="modal fade">
+          <div class="modal-dialog">
+            <div class="modal-content p-3">
+              <div class="modal-header">
+                <h5 class="modal-title" id="loginModalLabel">Log in</h5>
+                <button
+                  type="button"
+                  class="btn-close"
+                  data-bs-dismiss="modal"
+                ></button>
+              </div>
+              <div class="modal-body">
+                <form action="">
+                  <div class="mb-3">
+                    <label for="name" class="form-label">Name</label>
+                    <input
+                      type="text"
+                      class="form-control"
+                      id="name"
+                      placeholder="Name"
+                    />
+                  </div>
+                  <div class="mb-3">
+                    <label for="email" class="form-label">Email address</label>
+                    <input
+                      type="email"
+                      class="form-control"
+                      id="email"
+                      placeholder="name@example.com"
+                    />
+                  </div>
+                  <div
+                    class="login-bottom d-flex align-items-center justify-content-between"
+                  >
+                    <div class="login-bottom-left">
+                      <button type="submit" class="btn btn-primary">
+                        Log In
+                      </button>
+                    </div>
+                    <div
+                      class="login-bottom-right d-flex gap-3 align-items-center"
+                    >
+                      <div class="text-muted small">
+                        Are you not registered yet?
+                      </div>
+                      <a
+                        href="#"
+                        data-bs-toggle="modal"
+                        data-bs-target="#signinModal"
+                        >Sign In</a
+                      >
+                    </div>
+                  </div>
+                </form>
+              </div>
             </div>
-            <button
-              class="btn btn-primary mt-3"
-              type="button"
-              data-bs-toggle="offcanvas"
-              data-bs-target="#offcanvas"
-            >
-              Clear
-            </button>
           </div>
         </div>
-      </div>
+        <div id="signinModal" class="modal fade">
+          <div class="modal-dialog">
+            <div class="modal-content">
+              <div class="modal-header">
+                <h5 class="modal-title">Sign In</h5>
+                <button
+                  type="button"
+                  class="btn-close"
+                  data-bs-dismiss="modal"
+                ></button>
+              </div>
+              <div class="modal-body">
+                <div id="names" class="d-flex gap-2">
+                  <div id="firstname">
+                    <label for="" class="form-label">First Name</label>
+                    <input
+                      type="text"
+                      class="form-control"
+                      placeholder="First Name"
+                    />
+                  </div>
+                  <div id="lastname">
+                    <label for="" class="form-label">Last Name</label>
+                    <input
+                      type="text"
+                      class="form-control"
+                      placeholder="Last Name"
+                    />
+                  </div>
+                </div>
+                <label for="" class="form-label">Email address</label>
+                <input
+                  type="text"
+                  class="form-control"
+                  placeholder="name@example.com"
+                />
+                <label for="" class="form-label">Password</label>
+                <input
+                  type="text"
+                  class="form-control"
+                  placeholder="Password"
+                />
+                <label for="">Date of Birth</label>
+                <div class="row g-2">
+                  <div class="col">
+                    <select class="form-select">
+                      <option selected>Day</option>
+                    </select>
+                  </div>
+                  <div class="col">
+                    <select name="" id="" class="form-select">
+                      <option value=" " selected>Month</option>
+                    </select>
+                  </div>
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+        <div id="nav-right">
+          <button
+            class="btn btn-primary"
+            type="button"
+            data-bs-toggle="offcanvas"
+            data-bs-target="#offcanvas"
+          >
+            Notifications
+          </button>
+          <input type="text" placeholder="Search" />
+          <button>Search</button>
+          <div id="offcanvas" class="offcanvas offcanvas-end">
+            <div class="offcanvas-header">
+              <h5 class="offcanvas-title">Notifications</h5>
+              <button
+                type="button"
+                class="btn-close"
+                data-bs-dismiss="offcanvas"
+              ></button>
+            </div>
+            <div class="offcanvas-body">
+              <p>
+                Some text as placeholder.In real life you can have the elements
+                you have chosen. Like, text, images, lists, etc.
+              </p>
+              <div class="list-group">
+                <a
+                  href="#"
+                  class="list-group-item list-group-item-action"
+                  aria-current="true"
+                >
+                  <div class="d-flex w-100 justify-content-between">
+                    <h5 class="mb-1">List group item heading</h5>
+                    <small>3 days ago</small>
+                  </div>
+                  <p class="mb-1">Some placeholder content in a paragraph.</p>
+                  <small class="text-muted">And some small print.</small>
+                </a>
+                <a href="#" class="list-group-item list-group-item-action">
+                  <div class="d-flex w-100 justify-content-between">
+                    <h5 class="mb-1">List group item heading</h5>
+                    <small>3 days ago</small>
+                  </div>
+                  <p class="mb-1">Some placeholder content in a paragraph.</p>
+                  <small class="text-muted">And some muted small print.</small>
+                </a>
+                <a href="#" class="list-group-item list-group-item-action">
+                  <div class="d-flex w-100 justify-content-between">
+                    <h5 class="mb-1">List group item heading</h5>
+                    <small>3 days ago</small>
+                  </div>
+                  <p class="mb-1">Some placeholder content in a paragraph.</p>
+                  <small class="text-muted">And some muted small print.</small>
+                </a>
+              </div>
+              <button
+                class="btn btn-primary mt-3"
+                type="button"
+                data-bs-toggle="offcanvas"
+                data-bs-target="#offcanvas"
+              >
+                Clear
+              </button>
+            </div>
+          </div>
+        </div>
+      </nav>
     </header>
     <main>
       <nav aria-label="breadcrumb">

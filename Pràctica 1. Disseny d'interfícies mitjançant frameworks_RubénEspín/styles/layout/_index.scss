@@ -1,4 +1,4 @@
-@forward 'footer';
-@forward 'grid';
-@forward 'header';
-@forward 'sidebar';
+@use 'footer';
+@use 'grid';
+@use 'header';
+@use 'sidebar';

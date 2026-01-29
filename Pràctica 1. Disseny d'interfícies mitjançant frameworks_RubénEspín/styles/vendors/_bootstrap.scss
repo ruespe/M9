@@ -1,0 +1,3 @@
+// Importar Bootstrap DESPUÉS de tus variables personalizadas
+// Así Bootstrap usará tus valores en lugar de los defaults
+@import "../../node_modules/bootstrap/scss/bootstrap";
