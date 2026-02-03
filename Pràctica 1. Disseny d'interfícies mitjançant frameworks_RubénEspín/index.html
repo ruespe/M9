@@ -11,7 +11,7 @@
     <header
       class="bg-white text-white p-3 d-flex justify-content-between align-items-center"
     >
-      <nav class="navbar ">
+      <nav class="navbar">
         <a class="navbar-brand" href="#">SoftGPL</a>
         <ul class="d-flex list-unstyled mb-0 text-black gap-3">
           <li>Home</li>
@@ -116,49 +116,151 @@
                 ></button>
               </div>
               <div class="modal-body">
-                <div id="names" class="d-flex gap-2">
-                  <div id="firstname">
-                    <label for="" class="form-label">First Name</label>
+                <form>
+                  <div class="row mb-3">
+                    <div class="col-6">
+                      <label class="form-label text-muted small"
+                        >First Name</label
+                      >
+                      <input
+                        type="text"
+                        class="form-control"
+                        placeholder="First Name"
+                      />
+                    </div>
+                    <div class="col-6">
+                      <label class="form-label text-muted small"
+                        >Last Name</label
+                      >
+                      <input
+                        type="text"
+                        class="form-control"
+                        placeholder="Last Name"
+                      />
+                    </div>
+                  </div>
+
+                  <div class="mb-3">
+                    <label class="form-label text-muted small"
+                      >Email address</label
+                    >
                     <input
-                      type="text"
+                      type="email"
                       class="form-control"
-                      placeholder="First Name"
+                      placeholder="name@example.com"
                     />
                   </div>
-                  <div id="lastname">
-                    <label for="" class="form-label">Last Name</label>
+
+                  <div class="mb-3">
+                    <label class="form-label text-muted small">Password</label>
                     <input
-                      type="text"
+                      type="password"
                       class="form-control"
-                      placeholder="Last Name"
+                      placeholder="Password"
                     />
                   </div>
-                </div>
-                <label for="" class="form-label">Email address</label>
-                <input
-                  type="text"
-                  class="form-control"
-                  placeholder="name@example.com"
-                />
-                <label for="" class="form-label">Password</label>
-                <input
-                  type="text"
-                  class="form-control"
-                  placeholder="Password"
-                />
-                <label for="">Date of Birth</label>
-                <div class="row g-2">
-                  <div class="col">
-                    <select class="form-select">
-                      <option selected>Day</option>
-                    </select>
+
+                  <label class="form-label text-muted small"
+                    >Date of Birth</label
+                  >
+                  <div class="row mb-3">
+                    <div class="col-4">
+                      <select class="form-select">
+                        <option selected>Day</option>
+                        <option value="1">1</option>
+                      </select>
+                    </div>
+                    <div class="col-4">
+                      <select class="form-select">
+                        <option selected>Month</option>
+                        <option value="1">Jan</option>
+                      </select>
+                    </div>
+                    <div class="col-4">
+                      <select class="form-select">
+                        <option selected>Year</option>
+                        <option value="2000">2000</option>
+                      </select>
+                    </div>
                   </div>
-                  <div class="col">
-                    <select name="" id="" class="form-select">
-                      <option value=" " selected>Month</option>
-                    </select>
+
+                  <label class="form-label text-muted small">Gender</label>
+                  <div class="row mb-3">
+                    <div class="col-4">
+                      <div class="border rounded p-2">
+                        <div class="form-check">
+                          <input
+                            class="form-check-input"
+                            type="radio"
+                            name="gender"
+                            id="genderFemale"
+                          />
+                          <label class="form-check-label" for="genderFemale"
+                            >Female</label
+                          >
+                        </div>
+                      </div>
+                    </div>
+                    <div class="col-4">
+                      <div class="border rounded p-2">
+                        <div class="form-check">
+                          <input
+                            class="form-check-input"
+                            type="radio"
+                            name="gender"
+                            id="genderMale"
+                          />
+                          <label class="form-check-label" for="genderMale"
+                            >Male</label
+                          >
+                        </div>
+                      </div>
+                    </div>
+                    <div class="col-4">
+                      <div class="border rounded p-2">
+                        <div class="form-check">
+                          <input
+                            class="form-check-input"
+                            type="radio"
+                            name="gender"
+                            id="genderCustom"
+                          />
+                          <label class="form-check-label" for="genderCustom"
+                            >Personalized</label
+                          >
+                        </div>
+                      </div>
+                    </div>
                   </div>
-                </div>
+
+                  <p class="small text-muted mb-4" style="font-size: 0.75rem">
+                    By clicking Sign Up, you agree to our Terms. Learn more
+                    about how we collect, use and share your information in the
+                    <a href="#">Data Policy</a>, as well as our use of cookies
+                    in our <a href="#">Cookie Policy</a>.
+                  </p>
+
+                  <div
+                    class="d-flex justify-content-between align-items-center"
+                  >
+                    <button type="submit" class="btn btn-primary px-4">
+                      Sign in
+                    </button>
+
+                    <div class="text-end small">
+                      <span class="text-muted"
+                        >Are you already registered?</span
+                      >
+                      <a
+                        href="#"
+                        class="text-decoration-none fw-bold"
+                        data-bs-toggle="modal"
+                        data-bs-target="#loginModal"
+                        >Log In</a
+                      >
+                    </div>
+                  </div>
+                </form>
               </div>
             </div>
           </div>
@@ -231,7 +333,7 @@
         </div>
       </nav>
     </header>
-    <main>
+    <main class="mx-30 px-5 py-4">
       <nav aria-label="breadcrumb">
         <ol class="breadcrumb">
           <li class="breadcrumb-item"><a href="index.html">Home</a></li>
@@ -296,11 +398,181 @@
           <span class="carousel-control-next-icon"></span>
         </button>
       </section>
-      <section class="cards">
-        <div class="card">
-          <img src="media/pexels-format-1.jpg" alt="" />
+      <section class="cards d-flex gap-3 flex-wrap justify-content-center">
+        <div class="card" style="width: 18rem">
+          <img
+            src="media/pexels-format-1.jpg"
+            class="card-img-top"
+            alt="Imagen del producto"
+          />
+
+          <div class="card-body">
+            <h5 class="card-title">Card title</h5>
+            <p class="card-text">
+              Some quick example text to build on the card title and make up the
+              bulk of the card's content.
+            </p>
+          </div>
+
+          <ul class="list-group list-group-flush">
+            <li class="list-group-item">An item</li>
+            <li class="list-group-item">A second item</li>
+            <li class="list-group-item">A third item</li>
+          </ul>
+
+          <div class="card-body">
+            <a href="#" class="btn btn-primary">Add to Cart</a>
+            <a href="#" class="card-link ms-3">View specs</a>
+          </div>
+        </div>
+        <div class="card" style="width: 18rem">
+          <img
+            src="media/pexels-format-2.jpg"
+            class="card-img-top"
+            alt="Imagen del producto"
+          />
+
+          <div class="card-body">
+            <h5 class="card-title">Card title</h5>
+            <p class="card-text">
+              Some quick example text to build on the card title and make up the
+              bulk of the card's content.
+            </p>
+          </div>
+
+          <ul class="list-group list-group-flush">
+            <li class="list-group-item">An item</li>
+            <li class="list-group-item">A second item</li>
+            <li class="list-group-item">A third item</li>
+          </ul>
+
+          <div class="card-body">
+            <a href="#" class="btn btn-primary">Add to Cart</a>
+            <a href="#" class="card-link ms-3">View specs</a>
+          </div>
+        </div>
+        <div class="card" style="width: 18rem">
+          <img
+            src="media/pexels-pixabay-3.jpg"
+            class="card-img-top"
+            alt="Imagen del producto"
+          />
+
+          <div class="card-body">
+            <h5 class="card-title">Card title</h5>
+            <p class="card-text">
+              Some quick example text to build on the card title and make up the
+              bulk of the card's content.
+            </p>
+          </div>
+
+          <ul class="list-group list-group-flush">
+            <li class="list-group-item">An item</li>
+            <li class="list-group-item">A second item</li>
+            <li class="list-group-item">A third item</li>
+          </ul>
+
+          <div class="card-body">
+            <a href="#" class="btn btn-primary">Add to Cart</a>
+            <a href="#" class="card-link ms-3">View specs</a>
+          </div>
         </div>
       </section>
+      <div class="d-flex justify-content-center my-4">
+        <nav aria-label="Page navigation example">
+          <ul class="pagination">
+            <li class="page-item">
+              <a class="page-link" href="#">Previous</a>
+            </li>
+            <li class="page-item"><a class="page-link" href="#">1</a></li>
+            <li class="page-item active">
+              <a class="page-link" href="#">2</a>
+            </li>
+            <li class="page-item"><a class="page-link" href="#">3</a></li>
+            <li class="page-item"><a class="page-link" href="#">Next</a></li>
+          </ul>
+        </nav>
+      </div>
+
+      <h4>Compare Specs</h4>
+      <p class="text-muted">
+        Lorem ipsum dolor sit amet consectetur adipisicing elit. Accusamus
+        dolorum expedita accusantium saepe hic? Magni sunt impedit quam autem
+        architecto debitis, quas corrupti laboriosam voluptatem incidunt illum?
+      </p>
+
+      <div class="table-responsive my-4">
+        <table class="table table-hover">
+          <thead>
+            <tr>
+              <th scope="col">#</th>
+              <th scope="col"></th>
+              <th scope="col">First</th>
+              <th scope="col">Last</th>
+              <th scope="col">Handle</th>
+            </tr>
+          </thead>
+          <tbody>
+            <tr>
+              <th scope="row">Apple Macbook</th>
+              <td></td>
+              <td>Mark</td>
+              <td>Otto</td>
+              <td>@mdo</td>
+            </tr>
+            <tr>
+              <th scope="row">Chromebook</th>
+              <td></td>
+              <td>Jacob</td>
+              <td>Thornton</td>
+              <td>@fat</td>
+            </tr>
+            <tr>
+              <th scope="row">Dell Inspiron</th>
+              <td></td>
+              <td>Larry the Bird</td>
+              <td></td>
+              <td>@twitter</td>
+            </tr>
+          </tbody>
+        </table>
+      </div>
+
+      <p class="text-muted small">Compare specs</p>
+      <div class="row">
+        <div class="col-md-3 col-6">
+          <nav class="nav flex-column">
+            <a class="nav-link ps-0" href="#">Link</a>
+            <a class="nav-link ps-0" href="#">Link</a>
+            <a class="nav-link ps-0" href="#">Link</a>
+            <a class="nav-link ps-0 disabled" href="#">Disabled</a>
+          </nav>
+        </div>
+        <div class="col-md-3 col-6">
+          <nav class="nav flex-column">
+            <a class="nav-link ps-0 active" href="#">Active</a>
+            <a class="nav-link ps-0" href="#">Link</a>
+            <a class="nav-link ps-0" href="#">Link</a>
+            <a class="nav-link ps-0 disabled" href="#">Disabled</a>
+          </nav>
+        </div>
+        <div class="col-md-3 col-6">
+          <nav class="nav flex-column">
+            <a class="nav-link ps-0" href="#">Link</a>
+            <a class="nav-link ps-0" href="#">Link</a>
+            <a class="nav-link ps-0" href="#">Link</a>
+            <a class="nav-link ps-0 disabled" href="#">Disabled</a>
+          </nav>
+        </div>
+        <div class="col-md-3 col-6">
+          <nav class="nav flex-column">
+            <a class="nav-link ps-0" href="#">Link</a>
+            <a class="nav-link ps-0" href="#">Link</a>
+            <a class="nav-link ps-0" href="#">Link</a>
+            <a class="nav-link ps-0 disabled" href="#">Disabled</a>
+          </nav>
+        </div>
+      </div>
     </main>
     <footer></footer>
     <script src="node_modules/bootstrap/dist/js/bootstrap.bundle.min.js"></script>
