@@ -1,562 +1,438 @@
 <!doctype html>
 <html lang="en">
-  <head>
-    <meta charset="UTF-8" />
-    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-    <title>aaaaaaaaaaa</title>
-    <link rel="stylesheet" href="public/css/style.css" />
-  </head>
 
-  <body>
-    <header class="navbar navbar-expand-lg navbar-light bg-white border-bottom p-3">
-  <div class="container-fluid">
-    <a class="navbar-brand" href="#">SoftGPL</a>
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>aaaaaaaaaaa</title>
+  <link rel="stylesheet" href="public/css/style.css" />
+</head>
 
-    <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarContent">
-      <span class="navbar-toggler-icon"></span>
-    </button>
+<body>
+  <header class="navbar navbar-expand-lg navbar-light bg-white border-bottom p-3">
+    <div class="container-fluid">
+      <a class="navbar-brand" href="#">SoftGPL</a>
 
-    <div class="collapse navbar-collapse" id="navbarContent">
-      <ul class="navbar-nav me-auto mb-2 mb-lg-0">
-        <li class="nav-item"><a class="nav-link" href="#">Home</a></li>
-        <li class="nav-item"><a class="nav-link" href="#">Contact</a></li>
+      <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarContent">
+        <span class="navbar-toggler-icon"></span>
+      </button>
 
-        <li class="nav-item dropdown">
-          <a class="nav-link dropdown-toggle" href="#" role="button" data-bs-toggle="dropdown">
-            Dropdown
-          </a>
-          <ul class="dropdown-menu">
-            <li><a class="dropdown-item" href="#">Action 1</a></li>
-            <li><a class="dropdown-item" href="#">Action 2</a></li>
-          </ul>
-        </li>
-        <li class="nav-item"><a class="nav-link disabled">Disabled</a></li>
-      </ul>
+      <div class="collapse navbar-collapse" id="navbarContent">
+        <ul class="navbar-nav me-auto mb-2 mb-lg-0">
+          <li class="nav-item"><a class="nav-link" href="#">Home</a></li>
+          <li class="nav-item"><a class="nav-link" href="#">Contact</a></li>
 
-      <div class="d-flex align-items-center gap-2 me-3">
-        <a href="#" class="nav-link text-dark" data-bs-toggle="modal" data-bs-target="#loginModal">Log In</a>
-        <a href="#" class="nav-link text-dark" data-bs-toggle="modal" data-bs-target="#signinModal">Sign In</a>
+          <li class="nav-item dropdown">
+            <a class="nav-link dropdown-toggle" href="#" role="button" data-bs-toggle="dropdown">
+              Dropdown
+            </a>
+            <ul class="dropdown-menu">
+              <li><a class="dropdown-item" href="#">Action 1</a></li>
+              <li><a class="dropdown-item" href="#">Action 2</a></li>
+            </ul>
+          </li>
+          <li class="nav-item"><a class="nav-link disabled">Disabled</a></li>
+        </ul>
+
+        <div class="d-flex align-items-center gap-2 me-3">
+          <a href="#" class="nav-link text-dark" data-bs-toggle="modal" data-bs-target="#loginModal">Log In</a>
+          <a href="#" class="nav-link text-dark" data-bs-toggle="modal" data-bs-target="#signinModal">Sign In</a>
+        </div>
+
+        <form class="d-flex gap-2" role="search">
+          <button class="btn btn-primary d-flex align-items-center gap-2" type="button" data-bs-toggle="offcanvas"
+            data-bs-target="#offcanvasNotify">
+            Notifications <span class="badge text-bg-light rounded-pill">4</span>
+          </button>
+          <input class="form-control" type="search" placeholder="Search">
+          <button class="btn btn-outline-success" type="submit">Search</button>
+        </form>
       </div>
-
-      <form class="d-flex gap-2" role="search">
-        <button class="btn btn-primary d-flex align-items-center gap-2" type="button" data-bs-toggle="offcanvas" data-bs-target="#offcanvasNotify">
-          Notifications <span class="badge text-bg-light rounded-pill">4</span>
-        </button>
-        <input class="form-control" type="search" placeholder="Search">
-        <button class="btn btn-outline-success" type="submit">Search</button>
-      </form>
     </div>
-  </div>
-</header>
-    <main class="mx-30 px-5 py-4">
-      <nav aria-label="breadcrumb">
-        <ol class="breadcrumb">
-          <li class="breadcrumb-item"><a href="index.html">Home</a></li>
-          <li class="breadcrumb-item"><a href="library.html">Library</a></li>
-          <li class="breadcrumb-item active" aria-current="page">Data</li>
-        </ol>
+  </header>
+  <main class="px-5 py-4">
+    <nav aria-label="breadcrumb">
+      <ol class="breadcrumb">
+        <li class="breadcrumb-item"><a href="index.html">Home</a></li>
+        <li class="breadcrumb-item"><a href="library.html">Library</a></li>
+        <li class="breadcrumb-item active" aria-current="page">Data</li>
+      </ol>
+    </nav>
+    <section id="carousel" class="carousel slide mb-2">
+      <div class="carousel-indicators">
+        <button type="button" data-bs-target="#carousel" data-bs-slide-to="0" class="active" aria-current="true"
+          aria-label="Slide 1"></button>
+
+        <button type="button" data-bs-target="#carousel" data-bs-slide-to="1" aria-label="Slide 2"></button>
+
+        <button type="button" data-bs-target="#carousel" data-bs-slide-to="2" aria-label="Slide 3"></button>
+      </div>
+      <div class="carousel-inner">
+        <div class="carousel-item active">
+          <img src="media/pexels-flickr-157040.jpg" class="d-block w-100" />
+        </div>
+        <div class="carousel-item">
+          <img src="media/pexels-rodolfo-quirós-2330137.jpg" class="d-block w-100" />
+        </div>
+        <div class="carousel-item">
+          <img src="media/pexels-soumil-kumar-735911.jpg" class="d-block w-100" />
+        </div>
+      </div>
+      <button class="carousel-control-prev" data-bs-target="#carousel" data-bs-slide="prev">
+        <span class="carousel-control-prev-icon"></span>
+      </button>
+      <button class="carousel-control-next" data-bs-target="#carousel" data-bs-slide="next">
+        <span class="carousel-control-next-icon"></span>
+      </button>
+    </section>
+    <section class="cards d-flex gap-3 flex-wrap justify-content-center">
+      <div class="card" style="width: 18rem">
+        <img src="media/pexels-format-1.jpg" class="card-img-top" alt="Imagen del producto" />
+
+        <div class="card-body">
+          <h5 class="card-title">Card title</h5>
+          <p class="card-text">
+            Some quick example text to build on the card title and make up the
+            bulk of the card's content.
+          </p>
+        </div>
+
+        <ul class="list-group list-group-flush">
+          <li class="list-group-item">An item</li>
+          <li class="list-group-item">A second item</li>
+          <li class="list-group-item">A third item</li>
+        </ul>
+
+        <div class="card-body">
+          <a href="#" class="btn btn-primary">Add to Cart</a>
+          <a href="#" class="card-link ms-3">View specs</a>
+        </div>
+      </div>
+      <div class="card" style="width: 18rem">
+        <img src="media/pexels-format-2.jpg" class="card-img-top" alt="Imagen del producto" />
+
+        <div class="card-body">
+          <h5 class="card-title">Card title</h5>
+          <p class="card-text">
+            Some quick example text to build on the card title and make up the
+            bulk of the card's content.
+          </p>
+        </div>
+
+        <ul class="list-group list-group-flush">
+          <li class="list-group-item">An item</li>
+          <li class="list-group-item">A second item</li>
+          <li class="list-group-item">A third item</li>
+        </ul>
+
+        <div class="card-body">
+          <a href="#" class="btn btn-primary">Add to Cart</a>
+          <a href="#" class="card-link ms-3">View specs</a>
+        </div>
+      </div>
+      <div class="card" style="width: 18rem">
+        <img src="media/pexels-pixabay-3.jpg" class="card-img-top" alt="Imagen del producto" />
+
+        <div class="card-body">
+          <h5 class="card-title">Card title</h5>
+          <p class="card-text">
+            Some quick example text to build on the card title and make up the
+            bulk of the card's content.
+          </p>
+        </div>
+
+        <ul class="list-group list-group-flush">
+          <li class="list-group-item">An item</li>
+          <li class="list-group-item">A second item</li>
+          <li class="list-group-item">A third item</li>
+        </ul>
+
+        <div class="card-body">
+          <a href="#" class="btn btn-primary">Add to Cart</a>
+          <a href="#" class="card-link ms-3">View specs</a>
+        </div>
+      </div>
+    </section>
+    <div class="d-flex justify-content-center my-4">
+      <nav aria-label="Page navigation example">
+        <ul class="pagination">
+          <li class="page-item">
+            <a class="page-link" href="#">Previous</a>
+          </li>
+          <li class="page-item"><a class="page-link" href="#">1</a></li>
+          <li class="page-item active">
+            <a class="page-link" href="#">2</a>
+          </li>
+          <li class="page-item"><a class="page-link" href="#">3</a></li>
+          <li class="page-item"><a class="page-link" href="#">Next</a></li>
+        </ul>
       </nav>
-      <section id="carousel" class="carousel slide mb-2">
-        <div class="carousel-indicators">
-          <button
-            type="button"
-            data-bs-target="#carousel"
-            data-bs-slide-to="0"
-            class="active"
-            aria-current="true"
-            aria-label="Slide 1"
-          ></button>
+    </div>
 
-          <button
-            type="button"
-            data-bs-target="#carousel"
-            data-bs-slide-to="1"
-            aria-label="Slide 2"
-          ></button>
+  </main>
+  <footer class="px-5 py-4">
+    <h4>Compare Specs</h4>
+    <p class="text-muted">
+      Lorem ipsum dolor sit amet consectetur adipisicing elit. Accusamus
+      dolorum expedita accusantium saepe hic? Magni sunt impedit quam autem
+      architecto debitis, quas corrupti laboriosam voluptatem incidunt illum?
+    </p>
 
-          <button
-            type="button"
-            data-bs-target="#carousel"
-            data-bs-slide-to="2"
-            aria-label="Slide 3"
-          ></button>
-        </div>
-        <div class="carousel-inner">
-          <div class="carousel-item active">
-            <img src="media/pexels-flickr-157040.jpg" class="d-block w-100" />
-          </div>
-          <div class="carousel-item">
-            <img
-              src="media/pexels-rodolfo-quirós-2330137.jpg"
-              class="d-block w-100"
-            />
-          </div>
-          <div class="carousel-item">
-            <img
-              src="media/pexels-soumil-kumar-735911.jpg"
-              class="d-block w-100"
-            />
-          </div>
-        </div>
-        <button
-          class="carousel-control-prev"
-          data-bs-target="#carousel"
-          data-bs-slide="prev"
-        >
-          <span class="carousel-control-prev-icon"></span>
-        </button>
-        <button
-          class="carousel-control-next"
-          data-bs-target="#carousel"
-          data-bs-slide="next"
-        >
-          <span class="carousel-control-next-icon"></span>
-        </button>
-      </section>
-      <section class="cards d-flex gap-3 flex-wrap justify-content-center">
-        <div class="card" style="width: 18rem">
-          <img
-            src="media/pexels-format-1.jpg"
-            class="card-img-top"
-            alt="Imagen del producto"
-          />
+    <div class="table-responsive my-4">
+      <table class="table table-hover">
+        <thead>
+          <tr>
+            <th scope="col">#</th>
+            <th scope="col"></th>
+            <th scope="col">First</th>
+            <th scope="col">Last</th>
+            <th scope="col">Handle</th>
+          </tr>
+        </thead>
+        <tbody>
+          <tr>
+            <th scope="row">Apple Macbook</th>
+            <td></td>
+            <td>Mark</td>
+            <td>Otto</td>
+            <td>@mdo</td>
+          </tr>
+          <tr>
+            <th scope="row">Chromebook</th>
+            <td></td>
+            <td>Jacob</td>
+            <td>Thornton</td>
+            <td>@fat</td>
+          </tr>
+          <tr>
+            <th scope="row">Dell Inspiron</th>
+            <td></td>
+            <td>Larry the Bird</td>
+            <td></td>
+            <td>@twitter</td>
+          </tr>
+        </tbody>
+      </table>
+    </div>
 
-          <div class="card-body">
-            <h5 class="card-title">Card title</h5>
-            <p class="card-text">
-              Some quick example text to build on the card title and make up the
-              bulk of the card's content.
-            </p>
-          </div>
-
-          <ul class="list-group list-group-flush">
-            <li class="list-group-item">An item</li>
-            <li class="list-group-item">A second item</li>
-            <li class="list-group-item">A third item</li>
-          </ul>
-
-          <div class="card-body">
-            <a href="#" class="btn btn-primary">Add to Cart</a>
-            <a href="#" class="card-link ms-3">View specs</a>
-          </div>
-        </div>
-        <div class="card" style="width: 18rem">
-          <img
-            src="media/pexels-format-2.jpg"
-            class="card-img-top"
-            alt="Imagen del producto"
-          />
-
-          <div class="card-body">
-            <h5 class="card-title">Card title</h5>
-            <p class="card-text">
-              Some quick example text to build on the card title and make up the
-              bulk of the card's content.
-            </p>
-          </div>
-
-          <ul class="list-group list-group-flush">
-            <li class="list-group-item">An item</li>
-            <li class="list-group-item">A second item</li>
-            <li class="list-group-item">A third item</li>
-          </ul>
-
-          <div class="card-body">
-            <a href="#" class="btn btn-primary">Add to Cart</a>
-            <a href="#" class="card-link ms-3">View specs</a>
-          </div>
-        </div>
-        <div class="card" style="width: 18rem">
-          <img
-            src="media/pexels-pixabay-3.jpg"
-            class="card-img-top"
-            alt="Imagen del producto"
-          />
-
-          <div class="card-body">
-            <h5 class="card-title">Card title</h5>
-            <p class="card-text">
-              Some quick example text to build on the card title and make up the
-              bulk of the card's content.
-            </p>
-          </div>
-
-          <ul class="list-group list-group-flush">
-            <li class="list-group-item">An item</li>
-            <li class="list-group-item">A second item</li>
-            <li class="list-group-item">A third item</li>
-          </ul>
-
-          <div class="card-body">
-            <a href="#" class="btn btn-primary">Add to Cart</a>
-            <a href="#" class="card-link ms-3">View specs</a>
-          </div>
-        </div>
-      </section>
-      <div class="d-flex justify-content-center my-4">
-        <nav aria-label="Page navigation example">
-          <ul class="pagination">
-            <li class="page-item">
-              <a class="page-link" href="#">Previous</a>
-            </li>
-            <li class="page-item"><a class="page-link" href="#">1</a></li>
-            <li class="page-item active">
-              <a class="page-link" href="#">2</a>
-            </li>
-            <li class="page-item"><a class="page-link" href="#">3</a></li>
-            <li class="page-item"><a class="page-link" href="#">Next</a></li>
-          </ul>
+    <p class="text-muted small">Compare specs</p>
+    <div id="table-specs" class="row">
+      <div class="col-md-3 col-6">
+        <nav class="nav flex-column">
+          <a class="nav-link ps-0" href="#">Link</a>
+          <a class="nav-link ps-0" href="#">Link</a>
+          <a class="nav-link ps-0" href="#">Link</a>
+          <a class="nav-link ps-0 disabled" href="#">Disabled</a>
+        </nav>
+      </div>
+      <div class="col-md-3 col-6">
+        <nav class="nav flex-column">
+          <a class="nav-link ps-0 active" href="#">Active</a>
+          <a class="nav-link ps-0" href="#">Link</a>
+          <a class="nav-link ps-0" href="#">Link</a>
+          <a class="nav-link ps-0 disabled" href="#">Disabled</a>
+        </nav>
+      </div>
+      <div class="col-md-3 col-6">
+        <nav class="nav flex-column">
+          <a class="nav-link ps-0" href="#">Link</a>
+          <a class="nav-link ps-0" href="#">Link</a>
+          <a class="nav-link ps-0" href="#">Link</a>
+          <a class="nav-link ps-0 disabled" href="#">Disabled</a>
+        </nav>
+      </div>
+      <div class="col-md-3 col-6">
+        <nav class="nav flex-column">
+          <a class="nav-link ps-0" href="#">Link</a>
+          <a class="nav-link ps-0" href="#">Link</a>
+          <a class="nav-link ps-0" href="#">Link</a>
+          <a class="nav-link ps-0 disabled" href="#">Disabled</a>
         </nav>
       </div>
 
-    </main>
-    <footer>
-            <h4>Compare Specs</h4>
-      <p class="text-muted">
-        Lorem ipsum dolor sit amet consectetur adipisicing elit. Accusamus
-        dolorum expedita accusantium saepe hic? Magni sunt impedit quam autem
-        architecto debitis, quas corrupti laboriosam voluptatem incidunt illum?
-      </p>
-
-      <div class="table-responsive my-4">
-        <table class="table table-hover">
-          <thead>
-            <tr>
-              <th scope="col">#</th>
-              <th scope="col"></th>
-              <th scope="col">First</th>
-              <th scope="col">Last</th>
-              <th scope="col">Handle</th>
-            </tr>
-          </thead>
-          <tbody>
-            <tr>
-              <th scope="row">Apple Macbook</th>
-              <td></td>
-              <td>Mark</td>
-              <td>Otto</td>
-              <td>@mdo</td>
-            </tr>
-            <tr>
-              <th scope="row">Chromebook</th>
-              <td></td>
-              <td>Jacob</td>
-              <td>Thornton</td>
-              <td>@fat</td>
-            </tr>
-            <tr>
-              <th scope="row">Dell Inspiron</th>
-              <td></td>
-              <td>Larry the Bird</td>
-              <td></td>
-              <td>@twitter</td>
-            </tr>
-          </tbody>
-        </table>
+  </footer>
+  <div id="loginModal" class="modal fade">
+    <div class="modal-dialog">
+      <div class="modal-content p-3">
+        <div class="modal-header">
+          <h5 class="modal-title" id="loginModalLabel">Log in</h5>
+          <button type="button" class="btn-close" data-bs-dismiss="modal"></button>
+        </div>
+        <div class="modal-body">
+          <form action="">
+            <div class="mb-3">
+              <label for="name" class="form-label">Name</label>
+              <input type="text" class="form-control" id="name" placeholder="Name" />
+            </div>
+            <div class="mb-3">
+              <label for="email" class="form-label">Email address</label>
+              <input type="email" class="form-control" id="email" placeholder="name@example.com" />
+            </div>
+            <div class="login-bottom d-flex align-items-center justify-content-between">
+              <div class="login-bottom-left">
+                <button type="submit" class="btn btn-primary">
+                  Log In
+                </button>
+              </div>
+              <div class="login-bottom-right d-flex gap-3 align-items-center">
+                <div class="text-muted small">
+                  Are you not registered yet?
+                </div>
+                <a href="#" data-bs-toggle="modal" data-bs-target="#signinModal">Sign In</a>
+              </div>
+            </div>
+          </form>
+        </div>
       </div>
-
-      <p class="text-muted small">Compare specs</p>
-      <div id="table-specs" class="row">
-        <div class="col-md-3 col-6">
-          <nav class="nav flex-column">
-            <a class="nav-link ps-0" href="#">Link</a>
-            <a class="nav-link ps-0" href="#">Link</a>
-            <a class="nav-link ps-0" href="#">Link</a>
-            <a class="nav-link ps-0 disabled" href="#">Disabled</a>
-          </nav>
+    </div>
+  </div>
+  <div id="signinModal" class="modal fade">
+    <div class="modal-dialog">
+      <div class="modal-content">
+        <div class="modal-header">
+          <h5 class="modal-title">Sign In</h5>
+          <button type="button" class="btn-close" data-bs-dismiss="modal"></button>
         </div>
-        <div class="col-md-3 col-6">
-          <nav class="nav flex-column">
-            <a class="nav-link ps-0 active" href="#">Active</a>
-            <a class="nav-link ps-0" href="#">Link</a>
-            <a class="nav-link ps-0" href="#">Link</a>
-            <a class="nav-link ps-0 disabled" href="#">Disabled</a>
-          </nav>
-        </div>
-        <div class="col-md-3 col-6">
-          <nav class="nav flex-column">
-            <a class="nav-link ps-0" href="#">Link</a>
-            <a class="nav-link ps-0" href="#">Link</a>
-            <a class="nav-link ps-0" href="#">Link</a>
-            <a class="nav-link ps-0 disabled" href="#">Disabled</a>
-          </nav>
-        </div>
-        <div class="col-md-3 col-6">
-          <nav class="nav flex-column">
-            <a class="nav-link ps-0" href="#">Link</a>
-            <a class="nav-link ps-0" href="#">Link</a>
-            <a class="nav-link ps-0" href="#">Link</a>
-            <a class="nav-link ps-0 disabled" href="#">Disabled</a>
-          </nav>
-        </div>
-
-    </footer>
-            <div id="loginModal" class="modal fade">
-          <div class="modal-dialog">
-            <div class="modal-content p-3">
-              <div class="modal-header">
-                <h5 class="modal-title" id="loginModalLabel">Log in</h5>
-                <button
-                  type="button"
-                  class="btn-close"
-                  data-bs-dismiss="modal"
-                ></button>
+        <div class="modal-body">
+          <form>
+            <div class="row mb-3">
+              <div class="col-6">
+                <label class="form-label text-muted small">First Name</label>
+                <input type="text" class="form-control" placeholder="First Name" />
               </div>
-              <div class="modal-body">
-                <form action="">
-                  <div class="mb-3">
-                    <label for="name" class="form-label">Name</label>
-                    <input
-                      type="text"
-                      class="form-control"
-                      id="name"
-                      placeholder="Name"
-                    />
-                  </div>
-                  <div class="mb-3">
-                    <label for="email" class="form-label">Email address</label>
-                    <input
-                      type="email"
-                      class="form-control"
-                      id="email"
-                      placeholder="name@example.com"
-                    />
-                  </div>
-                  <div
-                    class="login-bottom d-flex align-items-center justify-content-between"
-                  >
-                    <div class="login-bottom-left">
-                      <button type="submit" class="btn btn-primary">
-                        Log In
-                      </button>
-                    </div>
-                    <div
-                      class="login-bottom-right d-flex gap-3 align-items-center"
-                    >
-                      <div class="text-muted small">
-                        Are you not registered yet?
-                      </div>
-                      <a
-                        href="#"
-                        data-bs-toggle="modal"
-                        data-bs-target="#signinModal"
-                        >Sign In</a
-                      >
-                    </div>
-                  </div>
-                </form>
+              <div class="col-6">
+                <label class="form-label text-muted small">Last Name</label>
+                <input type="text" class="form-control" placeholder="Last Name" />
               </div>
             </div>
-          </div>
-        </div>
-        <div id="signinModal" class="modal fade">
-          <div class="modal-dialog">
-            <div class="modal-content">
-              <div class="modal-header">
-                <h5 class="modal-title">Sign In</h5>
-                <button
-                  type="button"
-                  class="btn-close"
-                  data-bs-dismiss="modal"
-                ></button>
+
+            <div class="mb-3">
+              <label class="form-label text-muted small">Email address</label>
+              <input type="email" class="form-control" placeholder="name@example.com" />
+            </div>
+
+            <div class="mb-3">
+              <label class="form-label text-muted small">Password</label>
+              <input type="password" class="form-control" placeholder="Password" />
+            </div>
+
+            <label class="form-label text-muted small">Date of Birth</label>
+            <div class="row mb-3">
+              <div class="col-4">
+                <select class="form-select">
+                  <option selected>Day</option>
+                  <option value="1">1</option>
+                </select>
               </div>
-              <div class="modal-body">
-                <form>
-                  <div class="row mb-3">
-                    <div class="col-6">
-                      <label class="form-label text-muted small"
-                        >First Name</label
-                      >
-                      <input
-                        type="text"
-                        class="form-control"
-                        placeholder="First Name"
-                      />
-                    </div>
-                    <div class="col-6">
-                      <label class="form-label text-muted small"
-                        >Last Name</label
-                      >
-                      <input
-                        type="text"
-                        class="form-control"
-                        placeholder="Last Name"
-                      />
-                    </div>
-                  </div>
-
-                  <div class="mb-3">
-                    <label class="form-label text-muted small"
-                      >Email address</label
-                    >
-                    <input
-                      type="email"
-                      class="form-control"
-                      placeholder="name@example.com"
-                    />
-                  </div>
-
-                  <div class="mb-3">
-                    <label class="form-label text-muted small">Password</label>
-                    <input
-                      type="password"
-                      class="form-control"
-                      placeholder="Password"
-                    />
-                  </div>
-
-                  <label class="form-label text-muted small"
-                    >Date of Birth</label
-                  >
-                  <div class="row mb-3">
-                    <div class="col-4">
-                      <select class="form-select">
-                        <option selected>Day</option>
-                        <option value="1">1</option>
-                      </select>
-                    </div>
-                    <div class="col-4">
-                      <select class="form-select">
-                        <option selected>Month</option>
-                        <option value="1">Jan</option>
-                      </select>
-                    </div>
-                    <div class="col-4">
-                      <select class="form-select">
-                        <option selected>Year</option>
-                        <option value="2000">2000</option>
-                      </select>
-                    </div>
-                  </div>
-
-                  <label class="form-label text-muted small">Gender</label>
-                  <div class="row mb-3">
-                    <div class="col-4">
-                      <div class="border rounded p-2">
-                        <div class="form-check">
-                          <input
-                            class="form-check-input"
-                            type="radio"
-                            name="gender"
-                            id="genderFemale"
-                          />
-                          <label class="form-check-label" for="genderFemale"
-                            >Female</label
-                          >
-                        </div>
-                      </div>
-                    </div>
-                    <div class="col-4">
-                      <div class="border rounded p-2">
-                        <div class="form-check">
-                          <input
-                            class="form-check-input"
-                            type="radio"
-                            name="gender"
-                            id="genderMale"
-                          />
-                          <label class="form-check-label" for="genderMale"
-                            >Male</label
-                          >
-                        </div>
-                      </div>
-                    </div>
-                    <div class="col-4">
-                      <div class="border rounded p-2">
-                        <div class="form-check">
-                          <input
-                            class="form-check-input"
-                            type="radio"
-                            name="gender"
-                            id="genderCustom"
-                          />
-                          <label class="form-check-label" for="genderCustom"
-                            >Personalized</label
-                          >
-                        </div>
-                      </div>
-                    </div>
-                  </div>
-
-                  <p class="small text-muted mb-4" style="font-size: 0.75rem">
-                    By clicking Sign Up, you agree to our Terms. Learn more
-                    about how we collect, use and share your information in the
-                    <a href="#">Data Policy</a>, as well as our use of cookies
-                    in our <a href="#">Cookie Policy</a>.
-                  </p>
-
-                  <div
-                    class="d-flex justify-content-between align-items-center"
-                  >
-                    <button type="submit" class="btn btn-primary px-4">
-                      Sign in
-                    </button>
-
-                    <div class="text-end small">
-                      <span class="text-muted"
-                        >Are you already registered?</span
-                      >
-                      <a
-                        href="#"
-                        class="text-decoration-none fw-bold"
-                        data-bs-toggle="modal"
-                        data-bs-target="#loginModal"
-                        >Log In</a
-                      >
-                    </div>
-                  </div>
-                </form>
+              <div class="col-4">
+                <select class="form-select">
+                  <option selected>Month</option>
+                  <option value="1">Jan</option>
+                </select>
+              </div>
+              <div class="col-4">
+                <select class="form-select">
+                  <option selected>Year</option>
+                  <option value="2000">2000</option>
+                </select>
               </div>
             </div>
-          </div>
-        </div>
-<div class="offcanvas offcanvas-end" id="offcanvasNotify">
-            <div class="offcanvas-body">
-              <p>
-                Some text as placeholder.In real life you can have the elements
-                you have chosen. Like, text, images, lists, etc.
-              </p>
-              <div class="list-group">
-                <a
-                  href="#"
-                  class="list-group-item list-group-item-action"
-                  aria-current="true"
-                >
-                  <div class="d-flex w-100 justify-content-between">
-                    <h5 class="mb-1">List group item heading</h5>
-                    <small>3 days ago</small>
+
+            <label class="form-label text-muted small">Gender</label>
+            <div class="row mb-3">
+              <div class="col-4">
+                <div class="border rounded p-2">
+                  <div class="form-check">
+                    <input class="form-check-input" type="radio" name="gender" id="genderFemale" />
+                    <label class="form-check-label" for="genderFemale">Female</label>
                   </div>
-                  <p class="mb-1">Some placeholder content in a paragraph.</p>
-                  <small class="text-muted">And some small print.</small>
-                </a>
-                <a href="#" class="list-group-item list-group-item-action">
-                  <div class="d-flex w-100 justify-content-between">
-                    <h5 class="mb-1">List group item heading</h5>
-                    <small>3 days ago</small>
-                  </div>
-                  <p class="mb-1">Some placeholder content in a paragraph.</p>
-                  <small class="text-muted">And some muted small print.</small>
-                </a>
-                <a href="#" class="list-group-item list-group-item-action">
-                  <div class="d-flex w-100 justify-content-between">
-                    <h5 class="mb-1">List group item heading</h5>
-                    <small>3 days ago</small>
-                  </div>
-                  <p class="mb-1">Some placeholder content in a paragraph.</p>
-                  <small class="text-muted">And some muted small print.</small>
-                </a>
+                </div>
               </div>
-              <button
-                class="btn btn-primary mt-3"
-                type="button"
-                data-bs-toggle="offcanvas"
-                data-bs-target="#offcanvas"
-                data-bs-dismiss="offcanvas"
-              >
-                Clear
+              <div class="col-4">
+                <div class="border rounded p-2">
+                  <div class="form-check">
+                    <input class="form-check-input" type="radio" name="gender" id="genderMale" />
+                    <label class="form-check-label" for="genderMale">Male</label>
+                  </div>
+                </div>
+              </div>
+              <div class="col-4">
+                <div class="border rounded p-2">
+                  <div class="form-check">
+                    <input class="form-check-input" type="radio" name="gender" id="genderCustom" />
+                    <label class="form-check-label" for="genderCustom">Personalized</label>
+                  </div>
+                </div>
+              </div>
+            </div>
+
+            <p class="small text-muted mb-4" style="font-size: 0.75rem">
+              By clicking Sign Up, you agree to our Terms. Learn more
+              about how we collect, use and share your information in the
+              <a href="#">Data Policy</a>, as well as our use of cookies
+              in our <a href="#">Cookie Policy</a>.
+            </p>
+
+            <div class="d-flex justify-content-between align-items-center">
+              <button type="submit" class="btn btn-primary px-4">
+                Sign in
               </button>
+
+              <div class="text-end small">
+                <span class="text-muted">Are you already registered?</span>
+                <a href="#" class="text-decoration-none fw-bold" data-bs-toggle="modal" data-bs-target="#loginModal">Log
+                  In</a>
+              </div>
             </div>
-</div>
-    <script src="node_modules/bootstrap/dist/js/bootstrap.bundle.min.js"></script>
-  </body>
+          </form>
+        </div>
+      </div>
+    </div>
+  </div>
+  <div class="offcanvas offcanvas-end" id="offcanvasNotify">
+    <div class="offcanvas-header">
+      <h5 class="offcanvas-title">Notifications</h5>
+      <button type="button" class="btn-close" data-bs-dismiss="offcanvas"></button>
+    </div>
+    <div class="offcanvas-body">
+      <div class="list-group">
+                <p>
+          Some text as placeholder.In real life you can have the elements
+          you have chosen. Like, text, images, lists, etc.
+        </p>
+
+        <a href="#" class="list-group-item list-group-item-action" aria-current="true">
+          <div class="d-flex w-100 justify-content-between">
+            <h5 class="mb-1">List group item heading</h5>
+            <small>3 days ago</small>
+          </div>
+          <p class="mb-1">Some placeholder content in a paragraph.</p>
+          <small class="text-muted">And some small print.</small>
+        </a>
+        <a href="#" class="list-group-item list-group-item-action">
+          <div class="d-flex w-100 justify-content-between">
+            <h5 class="mb-1">List group item heading</h5>
+            <small>3 days ago</small>
+          </div>
+          <p class="mb-1">Some placeholder content in a paragraph.</p>
+          <small class="text-muted">And some muted small print.</small>
+        </a>
+        <a href="#" class="list-group-item list-group-item-action">
+          <div class="d-flex w-100 justify-content-between">
+            <h5 class="mb-1">List group item heading</h5>
+            <small>3 days ago</small>
+          </div>
+          <p class="mb-1">Some placeholder content in a paragraph.</p>
+          <small class="text-muted">And some muted small print.</small>
+        </a>
+      </div>
+      <button class="btn btn-primary mt-3" type="button" data-bs-toggle="offcanvas" data-bs-target="#offcanvas"
+        data-bs-dismiss="offcanvas">
+        Clear
+      </button>
+    </div>
+  </div>
+  <script src="node_modules/bootstrap/dist/js/bootstrap.bundle.min.js"></script>
+</body>
+
 </html>
