@@ -1,0 +1,33 @@
+header {
+  
+  &.bg-secondary {
+    .navbar-brand,
+    .nav-link:not(.disabled) {
+      color: #fff !important;
+    }
+    
+    .nav-link:hover {
+      color: rgba(255, 255, 255, 0.8) !important;
+    }
+    
+    .nav-link.disabled {
+      color: rgba(255, 255, 255, 0.5) !important;
+    }
+  }
+}
+
+.navbar-brand {
+  .logo-soft {
+    color: #fff;
+    font-weight: 400;
+    font-size: 2rem;
+    letter-spacing: 1px;
+  }
+  
+  .logo-gpl {
+    color: #e91e63;
+    font-weight: 700;
+    font-size: 2rem;
+    letter-spacing: 1px;
+  }
+}

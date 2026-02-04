@@ -1,0 +1,100 @@
+.segundo-color {
+  color: #33ff57;
+}
+
+.sombra-basica {
+  box-shadow: 2px 4px 6px 0px rgba(0, 0, 0, 0.3);
+}
+
+.sombra-default {
+  box-shadow: 2px 4px 6px 0px rgba(128, 128, 128, 0.5);
+}
+
+.gradiente-1 {
+  background: linear-gradient(100degdeg, #ff5733, #cc2400);
+}
+.gradiente-2 {
+  background: linear-gradient(200degdeg, #33ff57, #00cc24);
+}
+.gradiente-3 {
+  background: linear-gradient(300degdeg, #3357ff, #0024cc);
+}
+.gradiente-4 {
+  background: linear-gradient(400degdeg, #f333ff, #c000cc);
+}
+
+.op-0 {
+  opacity: 0;
+}
+
+.op-25 {
+  opacity: 0.25;
+}
+
+.op-50 {
+  opacity: 0.5;
+}
+
+.op-75 {
+  opacity: 0.75;
+}
+
+.op-100 {
+  opacity: 1;
+}
+
+.fs-xs {
+  font-size: 0.4rem;
+}
+
+.fs-md {
+  font-size: 0.625rem;
+}
+
+.fs-lg {
+  font-size: 1.2rem;
+}
+
+.fs-xl {
+  font-size: 1.8rem;
+}
+
+.fs-xxl {
+  font-size: 2.5rem;
+}
+
+.orange-60 {
+  background-color: hsl(38.8235294118, 100%, -10%);
+}
+
+.orange-45 {
+  background-color: rgb(25.5, 16.5, 0);
+}
+
+.orange-30 {
+  background-color: #664200;
+}
+
+.orange-15 {
+  background-color: rgb(178.5, 115.5, 0);
+}
+
+.orange {
+  background-color: orange;
+}
+
+.orange15 {
+  background-color: rgb(255, 192, 76.5);
+}
+
+.orange30 {
+  background-color: #ffdb99;
+}
+
+.orange45 {
+  background-color: rgb(255, 246, 229.5);
+}
+
+.orange60 {
+  background-color: hsl(38.8235294118, 100%, 110%);
+}/*# sourceMappingURL=ejercicios1-9sass_RubénEspín.css.map */

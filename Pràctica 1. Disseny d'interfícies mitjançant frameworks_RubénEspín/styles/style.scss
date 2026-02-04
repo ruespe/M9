@@ -1,12 +1,29 @@
-// 1. Primero cargar variables personalizadas
-@use 'abstracts' as *;
+@import 'abstracts/variables';
+@import 'abstracts/mixins';
+@import 'abstracts/functions';
+@import 'abstracts/placeholders';
 
-// 2. Importar Bootstrap (usará tus variables)
-@use 'vendors' as *;
+@import 'vendors/bootstrap';
+@import 'base/reset';
+@import 'base/typography';
+@import 'base/base';
 
-// 3. Luego el resto de estilos
-@use 'base' as *;
-@use 'components' as *;
-@use 'layout' as *;
-@use 'pages' as *;
-@use 'themes' as *;
+@import 'components/buttons';
+@import 'components/cards';
+@import 'components/forms';
+@import 'components/navigation';
+
+@import 'layout/header';
+@import 'layout/footer';
+@import 'layout/grid';
+@import 'layout/sidebar';
+
+@import 'pages/home';
+@import 'pages/about';
+
+@import 'themes/light';
+@import 'themes/dark';
+
+span.logo-soft {
+    color: $text-white;
+}

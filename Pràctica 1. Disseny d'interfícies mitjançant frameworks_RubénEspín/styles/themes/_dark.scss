@@ -1,0 +1,57 @@
+// ==========================================
+// TEMA FOSC - Dark Theme Styles
+// ==========================================
+
+// Estils per a pàgines amb tema fosc
+.bg-dark-theme {
+  background: linear-gradient(135deg, #1a1a2e 0%, #16213e 50%, #0f3460 100%);
+  min-height: 100vh;
+}
+
+// Card estilitzada per formularis en tema fosc
+.form-card-dark {
+  background: rgba(30, 30, 30, 0.95);
+  border: 1px solid rgba(255, 255, 255, 0.1);
+  backdrop-filter: blur(10px);
+}
+
+// Personalització del tema fosc
+[data-bs-theme="dark"] {
+  // Focus en inputs amb color primary
+  .form-control:focus,
+  .form-select:focus {
+    border-color: $logo-pink;
+    box-shadow: 0 0 0 0.25rem rgba($logo-pink, 0.25);
+  }
+  
+  // Breadcrumb més visible
+  .breadcrumb-item a {
+    color: rgba(255, 255, 255, 0.7);
+    
+    &:hover {
+      color: $logo-pink;
+    }
+  }
+  
+  // Accordion en tema fosc
+  .accordion-dark {
+    .accordion-button {
+      background-color: rgba(30, 30, 30, 0.8);
+      color: #e0e0e0;
+      
+      &:not(.collapsed) {
+        background-color: rgba($logo-pink, 0.2);
+        color: $logo-pink;
+      }
+      
+      &:focus {
+        box-shadow: 0 0 0 0.25rem rgba($logo-pink, 0.25);
+      }
+    }
+    
+    .accordion-item {
+      background-color: rgba(30, 30, 30, 0.8);
+      border-color: rgba(255, 255, 255, 0.1);
+    }
+  }
+}

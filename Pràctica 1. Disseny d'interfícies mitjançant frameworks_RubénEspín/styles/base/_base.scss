@@ -1,7 +1,7 @@
 body {
     font-family: Arial, sans-serif;
     margin: 0;
-    padding: 20px;
+    padding: 0;
     background-color: #f0f0f0;
 }
 
@@ -9,7 +9,26 @@ h1 {
     color: $primary;
     font-size: 2rem;
 }
-
-header {
-    background-color: $primary !important;
+.table-header-custom {
+    background-color: $secondary;
+    color: #fff;
+    
+    th {
+        font-weight: 600;
+        text-transform: uppercase;
+        letter-spacing: 0.5px;
+        padding: 1rem 0.75rem;
+        border-bottom: 2px solid darken($secondary, 10%);
+    }
+}
+.carousel {
+    .carousel-inner {
+        max-height: 400px;
+        overflow: hidden;
+        
+        img {
+            object-fit: cover;
+            max-height: 400px;
+        }
+    }
 }

@@ -4,14 +4,18 @@
 <head>
   <meta charset="UTF-8" />
   <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-  <title>aaaaaaaaaaa</title>
+  <title>SoftGPL_RubénEspín</title>
   <link rel="stylesheet" href="public/css/style.css" />
 </head>
 
 <body>
-  <header class="navbar navbar-expand-lg navbar-light bg-white border-bottom p-3">
+  <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.11.1/font/bootstrap-icons.css">
+
+  <header class="navbar navbar-expand-lg navbar-custom bg-secondary p-3">
     <div class="container-fluid">
-      <a class="navbar-brand" href="#">SoftGPL</a>
+      <a class="navbar-brand" href="#">
+        <span class="logo-soft">Soft</span><span class="logo-gpl">GPL</span>
+      </a>
 
       <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarContent">
         <span class="navbar-toggler-icon"></span>
@@ -35,17 +39,18 @@
         </ul>
 
         <div class="d-flex align-items-center gap-2 me-3">
-          <a href="#" class="nav-link text-dark" data-bs-toggle="modal" data-bs-target="#loginModal">Log In</a>
-          <a href="#" class="nav-link text-dark" data-bs-toggle="modal" data-bs-target="#signinModal">Sign In</a>
+          <a href="#" class="nav-link" data-bs-toggle="modal" data-bs-target="#loginModal">Log In</a>
+          <a href="#" class="nav-link" data-bs-toggle="modal" data-bs-target="#signinModal">Sign In</a>
+          <a href="form.html" class="btn btn-primary btn-sm"><i class="bi bi-person-plus"></i> Registration</a>
         </div>
 
         <form class="d-flex gap-2" role="search">
-          <button class="btn btn-primary d-flex align-items-center gap-2" type="button" data-bs-toggle="offcanvas"
+          <button class="btn btn-light d-flex align-items-center gap-2" type="button" data-bs-toggle="offcanvas"
             data-bs-target="#offcanvasNotify">
-            Notifications <span class="badge text-bg-light rounded-pill">4</span>
+            <i class="bi bi-bell"></i> Notifications <span class="badge bg-primary rounded-pill">4</span>
           </button>
           <input class="form-control" type="search" placeholder="Search">
-          <button class="btn btn-outline-success" type="submit">Search</button>
+          <button class="btn btn-search" type="submit">Search</button>
         </form>
       </div>
     </div>
@@ -58,7 +63,7 @@
         <li class="breadcrumb-item active" aria-current="page">Data</li>
       </ol>
     </nav>
-    <section id="carousel" class="carousel slide mb-2">
+    <section id="carousel" class="carousel slide mb-2 mh-400">
       <div class="carousel-indicators">
         <button type="button" data-bs-target="#carousel" data-bs-slide-to="0" class="active" aria-current="true"
           aria-label="Slide 1"></button>
@@ -67,7 +72,7 @@
 
         <button type="button" data-bs-target="#carousel" data-bs-slide-to="2" aria-label="Slide 3"></button>
       </div>
-      <div class="carousel-inner">
+      <div class="carousel-inner mh-400">
         <div class="carousel-item active">
           <img src="media/pexels-flickr-157040.jpg" class="d-block w-100" />
         </div>
@@ -86,11 +91,11 @@
       </button>
     </section>
     <section class="cards d-flex gap-3 flex-wrap justify-content-center">
-      <div class="card" style="width: 18rem">
-        <img src="media/pexels-format-1.jpg" class="card-img-top" alt="Imagen del producto" />
+      <div class="card">
+        <img src="media/pexels-format-1.jpg" class="card-img-top" alt="ordenador" />
 
         <div class="card-body">
-          <h5 class="card-title">Card title</h5>
+          <h5 class="card-title text-capitalize fw-bold">Card title</h5>
           <p class="card-text">
             Some quick example text to build on the card title and make up the
             bulk of the card's content.
@@ -103,16 +108,53 @@
           <li class="list-group-item">A third item</li>
         </ul>
 
+        <div class="card-body d-flex align-items-center justify-content-between">
+          <div class="links">
+            <a href="#" class="btn btn-primary">Add to Cart</a>
+            <a href="#" class="card-link ms-3">View specs</a>
+          </div>
+          <div class="specs">
+            <a href="#" class="card-share-icon" title="Share">
+              <i class="bi bi-share"></i>
+            </a>
+          </div>
+        </div>
+
+      </div>
+      <div class="card">
+        <img src="media/pexels-format-2.jpg" class="card-img-top" alt="ordenador" />
+
         <div class="card-body">
-          <a href="#" class="btn btn-primary">Add to Cart</a>
-          <a href="#" class="card-link ms-3">View specs</a>
+          <h5 class="card-title text-capitalize fw-bold">Card title</h5>
+          <p class="card-text">
+            Some quick example text to build on the card title and make up the
+            bulk of the card's content.
+          </p>
+        </div>
+
+        <ul class="list-group list-group-flush">
+          <li class="list-group-item">An item</li>
+          <li class="list-group-item">A second item</li>
+          <li class="list-group-item">A third item</li>
+        </ul>
+
+        <div class="card-body d-flex align-items-center justify-content-between">
+          <div class="links">
+            <a href="#" class="btn btn-primary">Add to Cart</a>
+            <a href="#" class="card-link ms-3">View specs</a>
+          </div>
+          <div class="specs">
+            <a href="#" class="card-share-icon" title="Share">
+              <i class="bi bi-share"></i>
+            </a>
+          </div>
         </div>
       </div>
-      <div class="card" style="width: 18rem">
-        <img src="media/pexels-format-2.jpg" class="card-img-top" alt="Imagen del producto" />
+      <div class="card">
+        <img src="media/pexels-pixabay-3.jpg" class="card-img-top" alt="ordenador" />
 
         <div class="card-body">
-          <h5 class="card-title">Card title</h5>
+          <h5 class="card-title text-capitalize fw-bold">Card title</h5>
           <p class="card-text">
             Some quick example text to build on the card title and make up the
             bulk of the card's content.
@@ -125,31 +167,16 @@
           <li class="list-group-item">A third item</li>
         </ul>
 
-        <div class="card-body">
-          <a href="#" class="btn btn-primary">Add to Cart</a>
-          <a href="#" class="card-link ms-3">View specs</a>
-        </div>
-      </div>
-      <div class="card" style="width: 18rem">
-        <img src="media/pexels-pixabay-3.jpg" class="card-img-top" alt="Imagen del producto" />
-
-        <div class="card-body">
-          <h5 class="card-title">Card title</h5>
-          <p class="card-text">
-            Some quick example text to build on the card title and make up the
-            bulk of the card's content.
-          </p>
-        </div>
-
-        <ul class="list-group list-group-flush">
-          <li class="list-group-item">An item</li>
-          <li class="list-group-item">A second item</li>
-          <li class="list-group-item">A third item</li>
-        </ul>
-
-        <div class="card-body">
-          <a href="#" class="btn btn-primary">Add to Cart</a>
-          <a href="#" class="card-link ms-3">View specs</a>
+        <div class="card-body d-flex align-items-center justify-content-between">
+          <div class="links">
+            <a href="#" class="btn btn-primary">Add to Cart</a>
+            <a href="#" class="card-link ms-3">View specs</a>
+          </div>
+          <div class="specs">
+            <a href="#" class="card-share-icon" title="Share">
+              <i class="bi bi-share"></i>
+            </a>
+          </div>
         </div>
       </div>
     </section>
@@ -170,9 +197,9 @@
     </div>
 
   </main>
-  <footer class="px-5 py-4">
+  <footer class="px-5 py-4 bg-secondary">
     <h4>Compare Specs</h4>
-    <p class="text-muted">
+    <p>
       Lorem ipsum dolor sit amet consectetur adipisicing elit. Accusamus
       dolorum expedita accusantium saepe hic? Magni sunt impedit quam autem
       architecto debitis, quas corrupti laboriosam voluptatem incidunt illum?
@@ -180,7 +207,7 @@
 
     <div class="table-responsive my-4">
       <table class="table table-hover">
-        <thead>
+        <thead class="table-header-custom">
           <tr>
             <th scope="col">#</th>
             <th scope="col"></th>
@@ -396,7 +423,7 @@
     </div>
     <div class="offcanvas-body">
       <div class="list-group">
-                <p>
+        <p>
           Some text as placeholder.In real life you can have the elements
           you have chosen. Like, text, images, lists, etc.
         </p>
