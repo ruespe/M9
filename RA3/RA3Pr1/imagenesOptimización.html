@@ -1,0 +1,93 @@
+<!doctype html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Document</title>
+    <link rel="stylesheet" href="style.css" />
+  </head>
+  <body>
+    <div id="jpg">
+      <div>
+        <h1>Imagen optimizada con una de tamaño del 53%</h1>
+        <h2>Original</h2>
+        <img src="imagenes/ds3_game-thumbnail.jpg" alt="" />
+        <p>Tamaño: 128,5KB</p>
+      </div>
+      <div>
+        <h2>Optimizada</h2>
+        <img src="imagenes/ds3_game-thumbnailOptimizado.jpg" alt="" />
+        <span>Tamaño: 61,4KB</span>
+        <span>53% de porcentaje de reducción</span>
+        <span>Herramienta utilizada Squoosh</span>
+      </div>
+    </div>
+    <div id="gif">
+      <h1>Imatge animada optimitzada prioritzant formats moderns</h1>
+      <h2>Original</h2>
+      <img src="imagenes/ds.gif" alt="Animació original (GIF)" />
+
+      <h2>Optimitzada (picture)</h2>
+      <picture>
+        <!-- De més modern a més antic; GIF com a fallback (última opció) -->
+        <source srcset="imagenes/ds.avif" type="image/avif" />
+        <source srcset="imagenes/ds.webp" type="image/webp" />
+        <img src="imagenes/ds.gif" alt="Animació optimitzada" />
+      </picture>
+
+      <h2>Optimitzada (video com a GIF)</h2>
+      <video autoplay loop muted playsinline>
+        <source src="imagenes/ds.webm" type="video/webm" />
+        <source src="imagenes/ds.mp4" type="video/mp4" />
+        El teu navegador no suporta vídeo HTML5.
+      </video>
+
+      <h2>Comparativa</h2>
+      <table>
+        <caption>
+          Pes dels fitxers i percentatge d'estalvi respecte al GIF original
+        </caption>
+        <thead>
+          <tr>
+            <th scope="col">Format</th>
+            <th scope="col">Fitxer</th>
+            <th scope="col">Pes</th>
+            <th scope="col">Estalvi vs GIF</th>
+          </tr>
+        </thead>
+        <tbody>
+          <tr>
+            <th scope="row">GIF (original)</th>
+            <td>ds.gif</td>
+            <td>389.5 KB</td>
+            <td>0%</td>
+          </tr>
+          <tr>
+            <th scope="row">AVIF</th>
+            <td>ds.avif</td>
+            <td>183.4 KB</td>
+            <td>-52.9%</td>
+          </tr>
+          <tr>
+            <th scope="row">WebP</th>
+            <td>ds.webp</td>
+            <td>150.5 KB</td>
+            <td>-61.34%</td>
+          </tr>
+          <tr>
+            <th scope="row">WebM</th>
+            <td>ds.webm</td>
+            <td>44.1 KB</td>
+            <td>-88.7%</td>
+          </tr>
+          <tr>
+            <th scope="row">MP4</th>
+            <td>ds.mp4</td>
+            <td>59.9 KB</td>
+            <td>-84.6%</td>
+          </tr>
+        </tbody>
+      </table>
+    </div>
+  </body>
+</html>
